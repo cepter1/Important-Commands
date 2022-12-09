@@ -1,0 +1,21 @@
+To Upgrade System
+sudo emerge --sync && sudo emerge -avuDN --with-bdeps=y @world && sudo eix-update
+
+Module Rebuilds
+sudo revdep-rebuild && sudo emerge @module-rebuild && sudo emerge @golang-rebuild && sudo emerge @preserved-rebuild && sudo perl-cleaner --all && sudo haskell-updater 
+
+To Extract Files
+tar -xvf archive.tar.xz
+
+To Make Bootable USB
+sudo dd if=someFile.iso of=/dev/sdb status=progress
+
+To Make USB Normal
+sudo wipefs --all /dev/sdb
+sudo mkfs.vfat -n 'USB' /dev/sdb
+
+To Update Grub After Kernel Upgrade
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+To See What Is In The World Set
+cat /var/lib/portage/world
