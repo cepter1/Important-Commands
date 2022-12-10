@@ -19,3 +19,6 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 To See What Is In The World Set
 cat /var/lib/portage/world
+
+For Mirrors (Arch)
+sudo reflector -c US -a 6 --protocol https --sort rate --save /etc/pacman.d/mirrorlist-arch
