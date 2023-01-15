@@ -28,3 +28,7 @@ sudo reflector -c US -a 6 --protocol https --sort rate --save /etc/pacman.d/mirr
 
 For DBus Launch
 export $(dbus-launch)
+
+To See What's Enabled in Runtime (Systemd)
+sudo systemctl list-unit-files --type=service --state=enabled --all
+
