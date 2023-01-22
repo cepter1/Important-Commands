@@ -32,3 +32,6 @@ export $(dbus-launch)
 To See What's Enabled in Runtime (Systemd)
 sudo systemctl list-unit-files --type=service --state=enabled --all
 
+Start wpa_supplicant
+sudo wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant/wpa_supplicant.conf
+
