@@ -36,4 +36,4 @@ Start wpa_supplicant
 sudo wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant/wpa_supplicant.conf
 
 For Mirrors (Gentoo)
-sudo mirrorselect -c USA -s3 -b10 -D
+sudo mirrorselect -c USA -s5 -b10 -D
