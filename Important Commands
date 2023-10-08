@@ -15,6 +15,7 @@ sudo wipefs --all /dev/sdb
 sudo mkfs.vfat -n 'USB' /dev/sdb
 
 To Update Grub After Kernel Upgrade
+sudo grub-install --target=x86_64-efi --efi-directory=/boot
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 To See What Is In The World Set
